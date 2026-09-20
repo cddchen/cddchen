@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 260" width="100%" height="100%">
+  <defs>
+    <!-- Liquid Gradient Blobs -->
+    <radialGradient id="orb-blue" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#00D2FF" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#0066FE" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="orb-purple" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#9D4EDD" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#5A189A" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="orb-pink" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FF5D8F" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#C9184A" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="orb-cyan" cx="60%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#2EC4B6" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#011627" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Glass Specular Border -->
+    <linearGradient id="glassBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.45" />
+      <stop offset="25%" stop-color="#FFFFFF" stop-opacity="0.15" />
+      <stop offset="70%" stop-color="#FFFFFF" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.2" />
+    </linearGradient>
+
+    <!-- Glass Fill -->
+    <linearGradient id="glassFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.02" />
+    </linearGradient>
+
+    <!-- Text Gradient -->
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="50%" stop-color="#F1F5F9" />
+      <stop offset="100%" stop-color="#CBD5E1" />
+    </linearGradient>
+
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="50%" stop-color="#818CF8" />
+      <stop offset="100%" stop-color="#C084FC" />
+    </linearGradient>
+
+    <!-- Drop Shadow Filter -->
+    <filter id="glassShadow" x="-10%" y="-10%" width="125%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.45" />
+    </filter>
+
+    <!-- Liquid Blur Filter for Mesh -->
+    <filter id="liquidBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="40" />
+    </filter>
+  </defs>
+
+  <style>
+    .font-heavy { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif; font-weight: 700; }
+    .font-medium { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-weight: 500; }
+    .font-regular { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-weight: 400; }
+    .font-mono { font-family: "SF Mono", Monaco, Menlo, Consolas, "Liberation Mono", monospace; }
+  </style>
+
+  <!-- Deep macOS Dark Canvas Background -->
+  <rect width="840" height="260" rx="20" fill="#0A0D14" />
+
+  <!-- Liquid Light Mesh Background Layer -->
+  <g filter="url(#liquidBlur)">
+    <!-- Vibrant glowing liquid blobs -->
+    <ellipse cx="140" cy="80" rx="160" ry="110" fill="url(#orb-blue)" />
+    <ellipse cx="440" cy="180" rx="210" ry="120" fill="url(#orb-purple)" />
+    <ellipse cx="710" cy="90" rx="170" ry="100" fill="url(#orb-pink)" />
+    <ellipse cx="580" cy="60" rx="130" ry="80" fill="url(#orb-cyan)" />
+  </g>
+
+  <!-- Dark Ambient Overlay to maintain contrast -->
+  <rect width="840" height="260" rx="20" fill="#05070A" fill-opacity="0.4" />
+
+  <!-- Apple Frosted Liquid Glass Panel -->
+  <g filter="url(#glassShadow)">
+    <!-- Main Glass Plate -->
+    <rect x="24" y="22" width="792" height="216" rx="18" fill="url(#glassFill)" stroke="url(#glassBorder)" stroke-width="1.2" />
+
+    <!-- Glass Top Specular Glare / Refraction Accent Line -->
+    <path d="M 44 23 L 796 23" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="1" stroke-linecap="round" />
+  </g>
+
+  <!-- macOS Window Header Bar Elements -->
+  <g transform="translate(48, 44)">
+    <!-- Traffic Light Controls -->
+    <circle cx="0" cy="0" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width="0.5" />
+    <circle cx="18" cy="0" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width="0.5" />
+    <circle cx="36" cy="0" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width="0.5" />
+
+    <!-- Center System Pill Badge -->
+    <g transform="translate(250, -11)">
+      <rect width="210" height="22" rx="11" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="0.8" />
+      <circle cx="14" cy="11" r="3.5" fill="#38BDF8" />
+      <text x="24" y="15" fill="#CBD5E1" font-size="11" class="font-medium" letter-spacing="0.3"> macOS Sequoia · Profile</text>
+    </g>
+  </g>
+
+  <!-- Main Hero Profile Information -->
+  <g transform="translate(52, 92)">
+    <!-- Avatar / Apple Memoji / Glass Symbol Placeholder -->
+    <g transform="translate(0, 4)">
+      <!-- Outer Glass Ring -->
+      <rect width="76" height="76" rx="18" fill="#FFFFFF" fill-opacity="0.06" stroke="url(#glassBorder)" stroke-width="1.2" />
+      <!-- Symbol: Terminal / Code / Liquid Sparkle -->
+      <path d="M 24 28 L 36 38 L 24 48" stroke="#38BDF8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+      <line x1="42" y1="48" x2="52" y2="48" stroke="#A855F7" stroke-width="3" stroke-linecap="round" />
+    </g>
+
+    <!-- Headings & Role Definition -->
+    <g transform="translate(96, 4)">
+      <!-- Name -->
+      <text x="0" y="28" fill="url(#textGrad)" font-size="30" class="font-heavy" letter-spacing="-0.5">cddchen</text>
+
+      <!-- Verified Badge -->
+      <g transform="translate(132, 10)">
+        <circle cx="9" cy="9" r="8" fill="#38BDF8" fill-opacity="0.2" stroke="#38BDF8" stroke-width="1" />
+        <path d="M 6 9 L 8 11.5 L 12 6.5" stroke="#38BDF8" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+      </g>
+
+      <!-- Primary Title / Specialization -->
+      <text x="0" y="52" fill="url(#accentGrad)" font-size="15" class="font-heavy" letter-spacing="0.2">Large Frontend &amp; Full-Stack Architect</text>
+
+      <!-- One-line Philosophy / Focus -->
+      <text x="0" y="72" fill="#94A3B8" font-size="12" class="font-regular" letter-spacing="0.1">Bridging AI APIs, modern web runtimes &amp; fluid developer tooling.</text>
+    </g>
+  </g>
+
+  <!-- Bottom Glass Chips / Interactive Pills -->
+  <g transform="translate(52, 192)">
+    <!-- Chip 1: Web / Frontend -->
+    <g transform="translate(0, 0)">
+      <rect width="168" height="26" rx="13" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="0.8" />
+      <text x="14" y="17" fill="#E2E8F0" font-size="11.5" class="font-medium">⚡ Modern Web &amp; Next.js</text>
+    </g>
+
+    <!-- Chip 2: Full-Stack Runtimes -->
+    <g transform="translate(178, 0)">
+      <rect width="168" height="26" rx="13" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="0.8" />
+      <text x="14" y="17" fill="#E2E8F0" font-size="11.5" class="font-medium">🧩 Node.js / Bun / TypeScript</text>
+    </g>
+
+    <!-- Chip 3: AI & IDE Bridges -->
+    <g transform="translate(356, 0)">
+      <rect width="180" height="26" rx="13" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="0.8" />
+      <text x="14" y="17" fill="#E2E8F0" font-size="11.5" class="font-medium">🤖 AI Gateway &amp; IDE Bridges</text>
+    </g>
+
+    <!-- Chip 4: Performance & Edge -->
+    <g transform="translate(546, 0)">
+      <rect width="170" height="26" rx="13" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="0.8" />
+      <text x="14" y="17" fill="#E2E8F0" font-size="11.5" class="font-medium">🌐 Cloudflare &amp; Serverless</text>
+    </g>
+  </g>
+</svg>

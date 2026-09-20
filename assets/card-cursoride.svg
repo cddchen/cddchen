@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 140" width="100%">
+  <defs>
+    <linearGradient id="cardBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.35" />
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.15" />
+    </linearGradient>
+    <radialGradient id="glow-cursor" cx="20%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#E2E8F0" />
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <style>
+    .title { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif; font-weight: 700; font-size: 16px; }
+    .desc { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; font-size: 11.5px; fill: #94A3B8; }
+    .tag { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; font-size: 10px; font-weight: 500; fill: #CBD5E1; }
+  </style>
+
+  <!-- Base Glass Card -->
+  <rect x="4" y="4" width="382" height="132" rx="16" fill="#0C101A" filter="url(#cardShadow)" />
+  <rect x="4" y="4" width="382" height="132" rx="16" fill="url(#glow-cursor)" />
+  <rect x="4" y="4" width="382" height="132" rx="16" fill="#FFFFFF" fill-opacity="0.04" stroke="url(#cardBorder)" stroke-width="1.2" />
+
+  <!-- Top Glass Highlight Line -->
+  <path d="M 20 5 L 370 5" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="1" stroke-linecap="round" />
+
+  <!-- Icon: Cursor Pointer -->
+  <g transform="translate(24, 22)">
+    <rect width="36" height="36" rx="10" fill="#06B6D4" fill-opacity="0.18" stroke="#06B6D4" stroke-opacity="0.4" stroke-width="1" />
+    <!-- Pointer Path -->
+    <path d="M 12 10 L 25 18 L 19 20 L 22 26 L 19 27 L 16 21 L 12 25 Z" fill="#67E8F9" />
+  </g>
+
+  <!-- Title & Pin Badge -->
+  <text x="70" y="38" fill="url(#textGrad)" class="title">cursoride2api</text>
+  <g transform="translate(332, 22)">
+    <rect width="36" height="18" rx="9" fill="#06B6D4" fill-opacity="0.2" stroke="#06B6D4" stroke-opacity="0.3" stroke-width="0.8" />
+    <text x="10" y="13" fill="#67E8F9" font-size="9.5" font-family="-apple-system, sans-serif" font-weight="600">PIN</text>
+  </g>
+
+  <!-- Description -->
+  <text x="24" y="78" class="desc">Cursor IDE to API proxy wrapper, exposing internal</text>
+  <text x="24" y="94" class="desc">editor AI capabilities as standardized endpoints.</text>
+
+  <!-- Tags / Badges -->
+  <g transform="translate(24, 108)">
+    <rect width="70" height="18" rx="9" fill="#FFFFFF" fill-opacity="0.08" />
+    <text x="10" y="13" class="tag">Cursor AI</text>
+
+    <rect x="76" width="76" height="18" rx="9" fill="#FFFFFF" fill-opacity="0.08" />
+    <text x="86" y="13" class="tag">API Gateway</text>
+
+    <rect x="158" width="66" height="18" rx="9" fill="#FFFFFF" fill-opacity="0.08" />
+    <text x="168" y="13" class="tag">TypeScript</text>
+  </g>
+</svg>

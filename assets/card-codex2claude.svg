@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 140" width="100%">
+  <defs>
+    <linearGradient id="cardBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.35" />
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.15" />
+    </linearGradient>
+    <radialGradient id="glow-codex" cx="20%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#F97316" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#E2E8F0" />
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <style>
+    .title { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif; font-weight: 700; font-size: 16px; }
+    .desc { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; font-size: 11.5px; fill: #94A3B8; }
+    .tag { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; font-size: 10px; font-weight: 500; fill: #CBD5E1; }
+  </style>
+
+  <!-- Base Glass Card -->
+  <rect x="4" y="4" width="382" height="132" rx="16" fill="#0C101A" filter="url(#cardShadow)" />
+  <rect x="4" y="4" width="382" height="132" rx="16" fill="url(#glow-codex)" />
+  <rect x="4" y="4" width="382" height="132" rx="16" fill="#FFFFFF" fill-opacity="0.04" stroke="url(#cardBorder)" stroke-width="1.2" />
+
+  <!-- Top Glass Highlight Line -->
+  <path d="M 20 5 L 370 5" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="1" stroke-linecap="round" />
+
+  <!-- Icon: Bridge / Switch Node -->
+  <g transform="translate(24, 22)">
+    <rect width="36" height="36" rx="10" fill="#F97316" fill-opacity="0.18" stroke="#F97316" stroke-opacity="0.4" stroke-width="1" />
+    <!-- Arrows Connection Icon -->
+    <path d="M 11 15 L 21 15 M 18 12 L 21 15 L 18 18" stroke="#FDBA74" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <path d="M 25 21 L 15 21 M 18 24 L 15 21 L 18 18" stroke="#FDBA74" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  </g>
+
+  <!-- Title & Pin Badge -->
+  <text x="70" y="38" fill="url(#textGrad)" class="title">codex2claude</text>
+  <g transform="translate(332, 22)">
+    <rect width="36" height="18" rx="9" fill="#F97316" fill-opacity="0.2" stroke="#F97316" stroke-opacity="0.3" stroke-width="0.8" />
+    <text x="10" y="13" fill="#FDBA74" font-size="9.5" font-family="-apple-system, sans-serif" font-weight="600">PIN</text>
+  </g>
+
+  <!-- Description -->
+  <text x="24" y="78" class="desc">Bridge Codex's Computer Use &amp; REPL sandboxes</text>
+  <text x="24" y="94" class="desc">into Anthropic Claude Code in one command.</text>
+
+  <!-- Tags / Badges -->
+  <g transform="translate(24, 108)">
+    <rect width="78" height="18" rx="9" fill="#FFFFFF" fill-opacity="0.08" />
+    <text x="10" y="13" class="tag">Claude Code</text>
+
+    <rect x="84" width="80" height="18" rx="9" fill="#FFFFFF" fill-opacity="0.08" />
+    <text x="94" y="13" class="tag">OpenAI Codex</text>
+
+    <rect x="170" width="70" height="18" rx="9" fill="#FFFFFF" fill-opacity="0.08" />
+    <text x="180" y="13" class="tag">JavaScript</text>
+  </g>
+</svg>
