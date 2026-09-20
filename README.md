@@ -1,37 +1,30 @@
 <div align="center">
-  <img src="./assets/hero.svg" alt="cddchen - Apple Liquid Glass Hero" width="100%" />
+  <img src="./assets/liquid-banner.svg" width="100%" alt="Large Frontend &amp; Full-Stack Architect" />
 </div>
 
 <br/>
 
-###  Featured Projects · 精选置顶
+### 🪐 Featured Projects · 精选置顶
 
-<table width="100%">
-  <tr>
-    <td width="50%" align="center">
-      <a href="https://github.com/cddchen/antigravityide2api">
-        <img src="./assets/card-antigravity.svg" width="100%" alt="antigravityide2api" />
-      </a>
-    </td>
-    <td width="50%" align="center">
-      <a href="https://github.com/cddchen/cursoride2api">
-        <img src="./assets/card-cursoride.svg" width="100%" alt="cursoride2api" />
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" align="center">
-      <a href="https://github.com/cddchen/codex2claude">
-        <img src="./assets/card-codex2claude.svg" width="100%" alt="codex2claude" />
-      </a>
-    </td>
-    <td width="50%" align="center">
-      <a href="https://github.com/cddchen/bilibili-study-chrome-extension">
-        <img src="./assets/card-bilibili.svg" width="100%" alt="bilibili-study" />
-      </a>
-    </td>
-  </tr>
-</table>
+#### 🔮 [antigravityide2api](https://github.com/cddchen/antigravityide2api)
+> **Antigravity IDE to API Gateway**  
+> 专注于 IDE 内部原生 AI 能力的反向工程与中间层封装，提供标准化的下游 API 调用端点。  
+> 🏷️ `Node.js` `TypeScript` `Reverse Engineering` `API Gateway`
+
+#### ⚡ [cursoride2api](https://github.com/cddchen/cursoride2api)
+> **Cursor IDE to API Wrapper**  
+> 代理并抹平 Cursor 编辑器内部 AI 请求契约，快速将其集成至各类开发流程与客户端。  
+> 🏷️ `TypeScript` `Cursor AI` `Proxy Middleware` `Developer Tools`
+
+#### 🌉 [codex2claude](https://github.com/cddchen/codex2claude)
+> **Codex to Claude Bridge**  
+> 一键将 OpenAI Codex 的 Computer Use、Node REPL 沙箱及原生技能无缝桥接至 Anthropic Claude Code。  
+> 🏷️ `JavaScript` `Anthropic Claude` `OpenAI Codex` `CLI`
+
+#### 📺 [bilibili-study](https://github.com/cddchen/bilibili-study-chrome-extension)
+> **Bilibili 视频学习伴侣扩展**  
+> 支持在线实时字幕提取、离线语音识别与双向播放进度同步的高效视频学习 Chrome 插件。  
+> 🏷️ `Chrome Extension` `TypeScript` `Audio/Video Processing`
 
 <br/>
 
@@ -69,7 +62,7 @@
 
 <div align="center">
   <a href="https://github.com/cddchen">
-    <img src="https://streak-stats.demolab.com?user=cddchen&theme=dark&background=0c101a&border=ffffff20&stroke=38bdf8&ring=818cf8&fire=38bdf8&currStreakNum=ffffff&sideNums=cbd5e1&sideLabels=94a3b8&currStreakLabel=38bdf8&dates=64748b&border_radius=16" alt="cddchen GitHub Streak" />
+    <img src="https://streak-stats.demolab.com?user=cddchen&theme=dark&background=00000000&border=ffffff20&stroke=38bdf8&ring=818cf8&fire=38bdf8&currStreakNum=ffffff&sideNums=cbd5e1&sideLabels=94a3b8&currStreakLabel=38bdf8&dates=64748b&border_radius=14" alt="cddchen GitHub Streak" />
   </a>
 </div>
 

@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 88" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Liquid Ambient Glows -->
+    <radialGradient id="aurora-cyan" cx="20%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#00D2FF" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#0066FE" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="aurora-purple" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#9D4EDD" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#7209B7" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="aurora-pink" cx="80%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF5D8F" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#F72585" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Glass Specular Border -->
+    <linearGradient id="glassBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.4" />
+      <stop offset="30%" stop-color="#FFFFFF" stop-opacity="0.1" />
+      <stop offset="70%" stop-color="#FFFFFF" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.2" />
+    </linearGradient>
+
+    <!-- Glass Fill -->
+    <linearGradient id="glassFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.06" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.015" />
+    </linearGradient>
+
+    <!-- Text Gradients -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="50%" stop-color="#E2E8F0" />
+      <stop offset="100%" stop-color="#94A3B8" />
+    </linearGradient>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="50%" stop-color="#818CF8" />
+      <stop offset="100%" stop-color="#C084FC" />
+    </linearGradient>
+
+    <!-- Filter for Liquid Bokeh -->
+    <filter id="auroraBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="28" />
+    </filter>
+
+    <filter id="glassShadow" x="-5%" y="-10%" width="110%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <style>
+    .sf-display { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif; font-weight: 700; }
+    .sf-text { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; font-weight: 400; }
+    .sf-mono { font-family: "SF Mono", Menlo, Monaco, Consolas, monospace; }
+  </style>
+
+  <!-- Ambient Liquid Mesh Glow (Transparent background, no dark solid canvas) -->
+  <g filter="url(#auroraBlur)">
+    <ellipse cx="180" cy="44" rx="160" ry="36" fill="url(#aurora-cyan)" />
+    <ellipse cx="440" cy="44" rx="180" ry="36" fill="url(#aurora-purple)" />
+    <ellipse cx="700" cy="44" rx="140" ry="36" fill="url(#aurora-pink)" />
+  </g>
+
+  <!-- Translucent Frosted Glass Capsule -->
+  <g filter="url(#glassShadow)">
+    <rect x="4" y="4" width="832" height="80" rx="18" fill="url(#glassFill)" stroke="url(#glassBorder)" stroke-width="1.2" />
+    <path d="M 22 5 L 818 5" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="1" stroke-linecap="round" />
+  </g>
+
+  <!-- Content: Left Apple Glyphs & Architecture Title -->
+  <g transform="translate(28, 28)">
+    <!-- Apple Glyph Badge -->
+    <g transform="translate(0, 0)">
+      <rect width="32" height="32" rx="10" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.15" stroke-width="0.8" />
+      <path d="M 16 10 C 14.8 10 13.5 10.7 12.8 11.6 C 12.1 12.5 11.8 13.7 11.9 14.8 C 13.1 14.9 14.3 14.1 15 13.2 C 15.7 12.3 16 11.1 16 10 Z M 20.7 17.7 C 20.7 15.3 22.6 14.1 22.7 14 C 21.6 12.4 19.8 12.2 19.2 12.1 C 17.7 12 16.2 13 15.4 13 C 14.6 13 13.4 12.1 12.2 12.1 C 10.6 12.1 9.1 13 8.2 14.5 C 6.5 17.5 7.8 21.9 9.5 24.3 C 10.3 25.5 11.2 26.8 12.6 26.7 C 13.9 26.6 14.5 25.8 16 25.8 C 17.6 25.8 18 26.7 19.4 26.7 C 20.8 26.7 21.7 25.5 22.5 24.3 C 23.5 22.9 23.9 21.5 23.9 21.4 C 23.8 21.4 20.7 20.2 20.7 17.7 Z" fill="#E2E8F0" />
+    </g>
+
+    <!-- Title & Subtitle -->
+    <g transform="translate(44, 2)">
+      <text x="0" y="14" fill="url(#titleGrad)" font-size="16" class="sf-display" letter-spacing="-0.2">Large Frontend &amp; Full-Stack Architect</text>
+      <text x="0" y="28" fill="#94A3B8" font-size="11.5" class="sf-text" letter-spacing="0.1">Bridging AI APIs, Modern Web Runtimes &amp; Developer Tooling</text>
+    </g>
+  </g>
+
+  <!-- Right Pill: System Status -->
+  <g transform="translate(686, 32)">
+    <rect width="126" height="24" rx="12" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="0.8" />
+    <circle cx="14" cy="12" r="3.5" fill="#10B981" />
+    <text x="24" y="16" fill="#CBD5E1" font-size="10.5" class="sf-display" letter-spacing="0.2">macOS · Active</text>
+  </g>
+</svg>

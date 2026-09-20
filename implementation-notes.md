@@ -1,16 +1,25 @@
 # Implementation Notes
 
-## 1. 仓库与基础环境
-- **仓库地址**: `https://github.com/cddchen/cddchen.git`
-- **本地路径**: `/Users/cdd/Documents/github_profile`
-- **当前状态**: 本地已成功完成 Commit (`5557017`)，待推送到远端。
+## 1. 布局与审美重构决策（针对初版反馈优化）
 
-## 2. 远端推送认证说明
-- **现象**: `remote: Invalid username or token. Password authentication is not supported for Git operations.`
-- **根因**: GitHub 自 2021 年起废除了基于 HTTPS 的明文密码认证，执行 Git Push 时终端提示的 Password 必须为 Personal Access Token (PAT)，或者改用 SSH 密钥认证。
-- **推荐方案**:
-  1. 生成 Classic Token (勾选 `repo` 权限) 粘贴作为 Password。
-  2. 生成 Ed25519 SSH 密钥并挂载至 GitHub，彻底免密码交互。
+### 痛点根因分析
+1. **右栏与左栏信息重叠严重**：
+   - GitHub 桌面端原生采用双列栅格：左栏 25% 专门用于渲染个人 Profile（真实头像、昵称 dong、用户名 cddchen、所在城市“上海”、组织等）。
+   - 初版 README 在顶部放置了带假头像、用户名和 macOS 窗控点的大黑块，导致右栏与左栏视觉严重打架、内容无意义重复。
+2. **黑色死底与 HTML 表格破坏质感**：
+   - 之前的大 Banner 采用深黑色不透明背景，在不同主题下显得非常突兀。
+   - 使用 HTML `<table>` 承载 4 个项目卡片，导致 GitHub Markdown 渲染出灰色的表格外边框和单元格分割线，彻底破坏了悬浮玻璃拟态的流畅感。
 
-## 3. 关键设计与架构决策
-（略，详见历史提交记录）
+### 重构举措
+1. **右栏定位重塑为“工程与项目展厅”**：
+   - 完全剔除任何重复的用户名、假头像等身份元素，留给 GitHub 左栏。
+   - 右栏专注展示技术定位、4 个置顶开源项目、全栈技术栈矩阵以及活跃度。
+2. **纯透明微光流体胶囊（`assets/liquid-banner.svg`）**：
+   - 画布改为 100% 透明（`fill="none"`），不再有生硬的黑色死底。
+   - 高度从 260px 极度收敛至 88px（纤细轻巧）。
+   - 仅保留 Apple 流光光斑（Lake Blue, Violet, Pink 散射高斯模糊）、极细半透明磨砂玻璃胶囊（Specular Glass Highlight）与极客状态绿点。
+3. **原生无边框项目卡片排版**：
+   - 彻底摒弃 HTML `<table>`，改用 GitHub 原生优雅的块引用（Blockquote `>`）与等宽圆角代码徽章（`TypeScript`）。
+   - 保证 100% 响应式，无缝融合黑白主题，无任何杂乱边框线条。
+4. **统计卡片透明融合**：
+   - 将 `streak-stats` 背景设为纯透明 `background=00000000`，彻底杜绝色块割裂。
